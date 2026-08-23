@@ -1,0 +1,8 @@
+name: LabelPropagation
+channels:
+  - defaults
+dependencies:
+  - networkx
+  - numpy
+  - matplotlib
+prefix: C:\Users\70221064605\AppData\Local\anaconda3\envs\LabelPropagation
