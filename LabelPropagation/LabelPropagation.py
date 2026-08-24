@@ -18,7 +18,6 @@ def LabelPropagation(A, maxIteracoes):
         iteracao = 0
         N = A
         Rotulos = np.array([N])
-        # print(Rotulos)
         RotulosMudaram = True
     
         while(iteracao < maxIteracoes and RotulosMudaram):
@@ -33,7 +32,6 @@ def LabelPropagation(A, maxIteracoes):
                     if i != []:
                         RotulosVizinhos = Rotulos[i]
                         NovoRotulo = CalcularModaEmpateAleatorio(RotulosVizinhos)
-                        #print(NovoRotulo)
                     if NovoRotulo != Rotulos[i]:
                       Rotulos[i] = NovoRotulo
                       RotulosMudaram = True
@@ -43,5 +41,5 @@ def LabelPropagation(A, maxIteracoes):
 # Leitura do arquivo com os dados e separação em vetores
 with open(r"..\Data\rede1_duas_comunidades.csv", 'r') as f:
     Data = [line.strip().split(",") for line in f if line.strip()]
-# print(Data)
-LabelPropagation(Data, 100)
+# Print dos resultados finais
+print(f"Rótulos Finais: {LabelPropagation(Data, 100)}", )
